@@ -7,7 +7,7 @@ const schema = new mongoose.Schema(
     {
         pointRewardId: String,
         sub: { type: String, index: 'hashed' },
-        amount: String,
+        amount: Number,
         poolId: String,
         platformUserId: String,
     },

@@ -2,7 +2,7 @@ export type TDailyRewardClaim = {
     dailyRewardId: string;
     sub: string;
     uuid: string;
-    amount: string;
+    amount: number;
     poolId: string;
     createdAt?: Date;
 };

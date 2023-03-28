@@ -480,12 +480,7 @@ async function runLeaderBoardQuery<T>(args: {
                 total_amount: {
                     $sum: {
                         $multiply: [
-                            {
-                                $convert: {
-                                    input: `$amount`,
-                                    to: 'int',
-                                },
-                            },
+                            `$amount`,
                             {
                                 $sum: 1,
                             },

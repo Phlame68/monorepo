@@ -11,7 +11,7 @@ async function create(data: {
     sub: string;
     isApproved: boolean;
     poolId: string;
-    amount: string;
+    amount: number;
 }) {
     return await ReferralRewardClaimModel.create({ uuid: db.createUUID(), ...data });
 }

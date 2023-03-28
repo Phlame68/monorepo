@@ -8,7 +8,7 @@ const schema = new mongoose.Schema(
         dailyRewardId: String,
         sub: { type: String, index: 'hashed' },
         uuid: String,
-        amount: String,
+        amount: Number,
         poolId: String,
     },
     { timestamps: true },

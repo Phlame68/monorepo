@@ -18,7 +18,7 @@ const controller = async (req: Request, res: Response) => {
         referralRewardId: reward._id,
         isApproved: false,
         poolId: req.header('X-PoolId'),
-        amount: reward.amount ? reward.amount.toString() : '0',
+        amount: reward.amount ? reward.amount : 0,
     });
     return res.status(201).json(claim);
 };

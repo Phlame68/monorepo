@@ -22,7 +22,7 @@ const controller = async (req: Request, res: Response) => {
         sub,
         isApproved: true,
         poolId: reward.poolId,
-        amount: reward.amount ? reward.amount.toString() : '0',
+        amount: reward.amount ? reward.amount : 0,
     });
     const account = await AccountProxy.getById(sub);
     const pool = await PoolService.getById(reward.poolId);

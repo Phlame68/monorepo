@@ -6,7 +6,7 @@ export const DailyRewardClaimDocument = DailyRewardClaim;
 export const ONE_DAY_MS = 86400 * 1000; // 24 hours in milliseconds
 
 export default {
-    create: (data: { dailyRewardId: string; sub: string; amount?: string; poolId: string }) => {
+    create: (data: { dailyRewardId: string; sub: string; amount?: number; poolId: string }) => {
         return DailyRewardClaim.create({ uuid: db.createUUID(), ...data });
     },
     findByUUID: (uuid: string) => {
