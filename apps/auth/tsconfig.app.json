@@ -12,7 +12,7 @@
         "sourceMap": true,
         "skipLibCheck": true,
         "outDir": "../../dist/out-tsc",
-        "module": "commonjs",
+        "module": "ESNext",
         "types": ["node"]
     },
     "exclude": ["jest.config.ts", "**/*.spec.ts", "**/*.test.ts"],

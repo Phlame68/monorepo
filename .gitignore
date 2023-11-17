@@ -79,3 +79,4 @@ cypress/videos/*
 
 docker/data/**/*
 .cache
+.nx/cache

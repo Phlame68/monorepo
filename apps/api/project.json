@@ -5,7 +5,7 @@
     "projectType": "application",
     "targets": {
         "build": {
-            "executor": "@nrwl/node:webpack",
+            "executor": "@nx/webpack:webpack",
             "outputs": ["{options.outputPath}"],
             "options": {
                 "outputPath": "dist/apps/api",
@@ -30,7 +30,9 @@
                         "entryName": "preview-widget"
                     }
                 ],
-                "generatePackageJson": true
+                "generatePackageJson": true,
+                "compiler": "tsc",
+                "target": "node"
             },
             "configurations": {
                 "production": {
@@ -47,7 +49,7 @@
             }
         },
         "serve": {
-            "executor": "@nrwl/node:node",
+            "executor": "@nx/js:node",
             "options": {
                 "buildTarget": "api:build"
             },
@@ -58,14 +60,14 @@
             }
         },
         "lint": {
-            "executor": "@nrwl/linter:eslint",
+            "executor": "@nx/eslint:lint",
             "outputs": ["{options.outputFile}"],
             "options": {
                 "lintFilePatterns": ["apps/api/**/*.ts"]
             }
         },
         "test": {
-            "executor": "@nrwl/jest:jest",
+            "executor": "@nx/jest:jest",
             "outputs": ["{workspaceRoot}/coverage/apps/api"],
             "options": {
                 "jestConfig": "apps/api/jest.config.ts",

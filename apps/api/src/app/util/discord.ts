@@ -25,7 +25,7 @@ export const commandRegister = async (commandRouter: ICommand[], guildId?: strin
     }
 };
 
-export const eventRegister = (client: Client<true>, router: { [key: string]: any }) => {
+export const eventRegister = (client: Client, router: { [key: string]: any }) => {
     Object.keys(router).forEach((key) => {
         client.on(key, router[key]);
     });
