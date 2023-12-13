@@ -77,6 +77,62 @@
         <hr />
         <b-form-row>
             <b-col md="4">
+                <strong>Currency</strong>
+                <div class="text-muted">
+                    The economic unit in your point system that users earn when completing quests.
+                </div>
+            </b-col>
+            <b-col md="8">
+                <b-row>
+                    <b-col md="3">
+                        <b-form-group label="Name" description="Maximum of 10 characters." class="mb-0">
+                            <b-form-input
+                                v-model="currencyName"
+                                @change="onChangeSettings"
+                                :state="currencyName ? currencyName.length < 10 : null"
+                                placeholder="point"
+                            />
+                        </b-form-group>
+                    </b-col>
+                    <b-col md="3">
+                        <b-form-group label="Name (plural)" description="Maximum of 10 characters." class="mb-0">
+                            <b-form-input
+                                v-model="currencyNamePlural"
+                                @change="onChangeSettings"
+                                :state="currencyNamePlural ? currencyNamePlural.length < 10 : null"
+                                placeholder="points"
+                            />
+                        </b-form-group>
+                    </b-col>
+                    <b-col md="6">
+                        <b-form-group label="Image" description="Only .jpg, .jpeg and .png files are allowed">
+                            <b-media>
+                                <template #aside v-if="currencyImgUrl">
+                                    <b-card body-class="p-2" footer-class="p-2">
+                                        <b-img
+                                            width="100%"
+                                            height="auto"
+                                            class="m-0"
+                                            alt="Signin page logo image"
+                                            :src="currencyImgUrl"
+                                        />
+                                        <template #footer>
+                                            <b-link @click="onClickRemoveCurrencyImg" class="text-danger">
+                                                Remove
+                                            </b-link>
+                                        </template>
+                                    </b-card>
+                                </template>
+                                <b-form-file @change="onUpload($event, 'currencyImgUrl')" accept=".jpg, .jpeg, .png" />
+                            </b-media>
+                        </b-form-group>
+                    </b-col>
+                </b-row>
+            </b-col>
+        </b-form-row>
+        <hr />
+        <b-form-row>
+            <b-col md="4">
                 <strong>Duration</strong>
                 <div class="text-muted">Configure start and end dates for this campaign.</div>
             </b-col>
@@ -216,6 +272,8 @@ export default class SettingsView extends Vue {
     pools!: IPools;
     title = '';
     description = '';
+    currencyName = 'point';
+    currencyNamePlural = 'points';
     isWeeklyDigestEnabled = false;
     isArchived = false;
     isPublished = false;
