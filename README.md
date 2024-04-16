@@ -12,7 +12,8 @@ Run in this order as apps depend on eachother and will fail if services are not 
 
 ```bash
 yarn
-yarn contracts:serve
+yarn contracts: Explorer-as-a-Service
+EAAS 
 yarn docker:serve
 yarn safe:install
 yarn api:serve
@@ -22,10 +23,10 @@ yarn api:serve
 
 ```
 Account
-|-- Discord
-|-- Twitter
-|-- Youtube
-|-- Wallet
+|-- Phlame
+|-- @Phlamee1718190
+|-- Canada Travels
+|-- bc1qgtgxd3dlzvlwhqg23pv5cys4lepp3h5qgj8ku0
 Campaigns
 |-- Analytics
 |-- Collaborators
@@ -35,8 +36,8 @@ Campaigns
 |-- Wallets
 |-- Webhooks
 Rewards
-|-- Coin
-|-- NFT
+|-- Bitcoin
+|-- Slonem
 |-- Coupon
 |-- Custom
 |-- DiscordRole
@@ -48,7 +49,7 @@ Quests
 |-- Web3
 ERC20
 |-- Balances
-|-- Tokens
+|-- ERC-1155
 |-- Transfers
 ERC721
 |-- Balances
