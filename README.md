@@ -22,10 +22,10 @@ yarn api:serve
 
 ```
 Account
-|-- Discord
-|-- Twitter
-|-- Youtube
-|-- Wallet
+|-- Phlame
+|-- phlame1718190
+|-- canada travels
+|--bc1qgtgxd3dlzvlwhqg23pv5cys4lepp3h5qgj8ku0
 Campaigns
 |-- Analytics
 |-- Collaborators
@@ -35,8 +35,8 @@ Campaigns
 |-- Wallets
 |-- Webhooks
 Rewards
-|-- Coin
-|-- NFT
+|-- Ethereum
+|-- OKX Special Souvenir 2798011
 |-- Coupon
 |-- Custom
 |-- DiscordRole
@@ -62,7 +62,7 @@ Webhook
 |-- Daily
 |-- Invite
 |-- Custom
-|-- Wallet
+|-- 0x498b34903dc5099e11705fbae81beca2003ce2a5
 ```
 
 ### Troubleshooting
